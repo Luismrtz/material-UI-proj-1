@@ -4,10 +4,10 @@ import { State } from '../state/type';
 
 import { Card, CardActionArea, CardMedia, Container, Grid, Modal, Typography } from '@material-ui/core'
 import { RouteComponentProps, withRouter } from "react-router-dom";
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+
 import Footer from '../components/footer/footer';
 
-
+import { detailStyles } from './pagesStyles';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -38,52 +38,11 @@ function getModalStyle() {
 
 
 
-const useStyles = makeStyles(theme => ({
-    contWidth: {
-        maxWidth: '112rem',
-    },
-    marginTest: {
-        // marginTop: '10rem',
-        margin: theme.spacing(20, 0, 15)
-       
-    },
-    typeSpacing: {
-      // margin: theme.spacing(5, 0, 5),
-      marginBottom: theme.spacing(5),
-    },
-    cardactionTest: {
-        height: '100%'
-      },
-      card2: {
-        height: '25rem',
-      },
-      cardModal: {
-        maxHeight: '80vh',
-        height: '100%'
-      },
-      cardMedia: {
-        // width: '100%',
-        
-        height: '100%',
-        paddingTop: '56.25%'  // 16:9
-      },
-      paper: {
-        position: 'absolute',
-        width: '100%',
-        maxWidth: '80vw',
-        maxHeight: '100%',
-        // maxHeight: '700px',
-        // backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
-        boxShadow: theme.shadows[5],
-        // padding: theme.spacing(2, 4, 3),
-      },
-      
-}))
+
 
 const DetailsPage:React.FC<RouteComponentProps<any>> = (props) => {
     const select = useSelector((state: State) => state.select);
-    const classes = useStyles();
+    const classes = detailStyles();
     const [showModal, setShowModal] = useState(false);
     // const [width, setWidth] = useState(window.innerWidth);
     const [modalStyle] = useState(getModalStyle);
@@ -184,7 +143,7 @@ const closeModal = () => {
    </Grid>
 
      <Grid container item  spacing={3}>
-       <Grid item xs={4} onClick={() => openModal({urlPhoto})}>
+       <Grid item xs={12} sm={7} md={4} onClick={() => openModal({urlPhoto})}>
        <Card  className={classes.card2} elevation={1}>
            <CardActionArea className={classes.cardactionTest}>
            <CardMedia 
@@ -196,7 +155,7 @@ const closeModal = () => {
            </CardActionArea>
          </Card>
      </Grid>
-       <Grid item xs={2} onClick={() => openModal2({urlPhoto2})}>
+       <Grid item xs={12} sm={5} md={2} onClick={() => openModal2({urlPhoto2})}>
        <Card  className={classes.card2} elevation={1}>
            <CardActionArea className={classes.cardactionTest}>
            <CardMedia 
@@ -208,7 +167,7 @@ const closeModal = () => {
            </CardActionArea>
          </Card>
      </Grid>
-       <Grid item xs={6} onClick={() => openModal3({urlPhoto3})}>
+       <Grid item xs={12} sm={12} md={6} onClick={() => openModal3({urlPhoto3})}>
        <Card  className={classes.card2} elevation={1}>
            <CardActionArea className={classes.cardactionTest}>
            <CardMedia 

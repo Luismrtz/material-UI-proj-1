@@ -8,63 +8,12 @@ import { State } from '../state/type';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Main from '../components/main/main';
 
-const useStyles = makeStyles((theme) => ({
-  contWidth: {
-    //? temporary, depending of want to add navbar visibility on scroll
-    margin: theme.spacing(9,'auto', 0),
-    maxWidth: '112rem',
-    // padding: theme.spacing(0, 2),
-    
-    // overflow: 'hidden'
-},
-maxWidthWrapper: {
-  // margin: theme.spacing(0,'auto', 0),
-  // backgroundColor: '#fff',
-  padding: theme.spacing(0, 2),
-  // maxWidth: '112rem'
-},
-colorWrapper: {
-  backgroundColor: 'orangered'
-},
-innerWidth: {
-  margin: theme.spacing(0, 'auto', 0),
-  paddingTop: theme.spacing(5),
-  maxWidth: '80rem',
-  // backgroundColor: '#fff'
-},
-  pageAlign: {
-    textAlign: 'center',
-    padding: theme.spacing(12, 0, 12)
-  },
-  gridSpacing: {
-    padding: theme.spacing(5, 0, 5)
-  },
-
-    spacingTitle: {
-        marginBottom: theme.spacing(10),
-      },
-      test4: {
-        // height: '80vh',
-        padding: theme.spacing(10, 0),
-        backgroundColor: 'rgb(252,244,235)'
-      },
-      cardMediaTest1: {
-        height: '400px',
-      },
-      test6: {
-        margin: theme.spacing(4, 0),
-      },
-      mWidth: {
-        margin: 'auto',
-        maxWidth: '112rem'
-      }
-    
-}));
+import {infoStyles} from './pagesStyles';
 
 
 
 const InfoPage:React.FC<RouteComponentProps<any>> = (props) => {
-   const classes = useStyles();
+   const classes = infoStyles();
    const tabbingData = useSelector((state: State) => state.switching)
 
 

@@ -5,10 +5,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { State } from '../../state/type';
 import { Link } from 'react-router-dom';
+
+import useStyles from './tabbingStyles';
+
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,37 +53,6 @@ function a11yProps(index: any) {
   };
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    // flexGrow: 1,
-    // backgroundColor: theme.palette.background.paper,
-   paddingTop: theme.spacing(14),
-    paddingBottom: theme.spacing(14),
-    textAlign: 'center',
-    minHeight: '600px',
-    // backgroundColor: '#fff'
-  },
-  tabFlex: {
-
-  },
-  tabbingCss: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
-    '& > div': {
-      borderBottom: '1px solid rgba(105, 105, 105, 0.849)'
-    }
-  },
-
-
-  gridCss: {
-    paddingTop: '20px',
-    paddingBottom: '20px',
-    borderTop: '1px solid black',
-    '&:last-child': {
-      borderBottom: '1px solid black'
-    }
-  }
-}));
 
 const Tabbing = () => {
   const classes = useStyles();
@@ -120,7 +92,7 @@ const Tabbing = () => {
       <TabPanel value={value} index={0}>
           <Grid container justify='center' >
               
-                <Grid container item  lg={6}>
+                {/* <Grid container item  lg={6}>
                 {newTabData1.map((tab) => (
                     <Grid container item direction="row" className={classes.gridCss} justify='space-between' sm={12}  key={tab.id}>
                         <Grid item>
@@ -130,37 +102,67 @@ const Tabbing = () => {
                          <Typography >${tab.price}</Typography>
                         </Grid>
                         <Grid  item>
-                            {/* <Grid item> */}
+                       
                                 <Button variant='contained' color='secondary' component={Link} to={"/info/" + tab.id}>Click</Button>
-                            {/* </Grid> */}
+                       
                         </Grid>
                     </Grid>
                 ))}.
-            </Grid>
+            </Grid> */}
+<TableContainer>
+
+  <Table className={classes.table} aria-label="simple table">
+
+          <TableBody>
+            {newTabData1.map((tab) => (
+              <TableRow key={tab.id}>
+                {/* <TableCell component="th" scope="row">
+                  {tab.title}
+                </TableCell> */}
+                <TableCell component="th" scope="row"> <Typography component={Link} to={"/info/" + tab.id}  className={classes.textDec} color="secondary">{tab.title}</Typography></TableCell>
+                <TableCell align="center">${tab.price}</TableCell>
+                <TableCell align="right"> <Button variant='contained' color='secondary' component={Link} to={"/info/" + tab.id}>Click</Button></TableCell>
+
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+</TableContainer>
+
+
+
           </Grid>
       </TabPanel>
       <TabPanel value={value} index={1}>
           <Grid container justify='center' >
               
-                <Grid container item lg={6}>
-                {newTabData2.map((tab) => (
-                    <Grid container item direction="row" className={classes.gridCss} justify='space-between' sm={12}  key={tab.id}>
-                        <Grid item>
-                            <Typography component={Link} to={"/info/" + tab.id}>{tab.title}</Typography>
-                        </Grid>
-                        <Grid  item>
-                            {/* <Grid item> */}
-                                <Typography >${tab.price}</Typography>
-                            {/* </Grid> */}
-                        </Grid>
-                        <Grid  item>
-                            {/* <Grid item> */}
-                                <Button variant='contained' color='secondary' component={Link} to={"/info/" + tab.id}>Click</Button>
-                            {/* </Grid> */}
-                        </Grid>
-                    </Grid>
-                ))}.
-            </Grid>
+          <TableContainer>
+
+          <Table className={classes.table} aria-label="simple table">
+                  {/* <TableHead>
+                    <TableRow>
+                      <TableCell>Types</TableCell>
+                      <TableCell align="center">Price</TableCell>
+                      <TableCell align="right">Links</TableCell>
+
+                    </TableRow>
+                  </TableHead> */}
+                  <TableBody>
+                    {newTabData2.map((tab) => (
+                      <TableRow key={tab.id}>
+                        {/* <TableCell component="th" scope="row">
+                          {tab.title}
+                        </TableCell> */}
+                        <TableCell component="th" scope="row"> <Typography component={Link} to={"/info/" + tab.id} className={classes.textDec} color="secondary">{tab.title}</Typography></TableCell>
+                        {/* <TableCell component="th" scope="row"> <Typography component={Link} to={"/info/" + tab.id}>{tab.title}</Typography></TableCell> */}
+                        <TableCell align="center">${tab.price}</TableCell>
+                        <TableCell align="right"> <Button variant='contained' color='secondary' component={Link} to={"/info/" + tab.id}>Click</Button></TableCell>
+
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+          </TableContainer>
           </Grid>
       </TabPanel>
 

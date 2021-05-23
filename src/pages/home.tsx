@@ -8,29 +8,11 @@ import { Container } from '@material-ui/core'
 import Tabbing from '../components/tabbing/tabbing';
 
 
+import { homeStyles } from './pagesStyles';
 
-const useStyles = makeStyles(theme => ({
-    contWidth: {
-           //? temporary, depending of want to add navbar visibility on scroll
-           margin: theme.spacing(6,'auto', 0),
-        maxWidth: '112rem',
-       
-    },
-
-    subContWidth: {
-           //? temporary, depending of want to add navbar visibility on scroll
-           margin: theme.spacing(0,'auto', 0),
-        //    padding: theme.spacing(0, 2),
-        maxWidth: '112rem',
-    },
-    colorWrapper: {
-        backgroundColor: 'orangered',
-        padding: theme.spacing(0, 2),
-    }
-}))
 
 const HomePage = () => {
-    const classes = useStyles();
+    const classes = homeStyles();
     useEffect(() => {
   
  

@@ -7,19 +7,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Display from '../components/display/display';
 import Bio from '../components/bio/bio';
 
-const useStyles = makeStyles(theme => ({
-    contWidth: {
-        //? temporary, depending of want to add navbar visibility on scroll
-        margin: theme.spacing(6,'auto', 0),
-        maxWidth: '112rem',
-    },
-    colorWrapper: {
-        backgroundColor: 'orangered'
-    }
-}))
+import { aboutStyles } from './pagesStyles';
 
 const AboutPage = () => {
-    const classes = useStyles();
+    const classes = aboutStyles();
 
 
     useEffect(() => {

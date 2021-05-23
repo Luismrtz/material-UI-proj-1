@@ -92,6 +92,13 @@ const itemData: ImageTypes[]= [
       type: 1,
       desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
     },
+    {
+      id: 7,
+    price: 10,
+    title: 'extra large',
+    type: 1,
+    desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+  },
 
   
   ];
