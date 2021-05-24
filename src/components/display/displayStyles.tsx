@@ -2,18 +2,18 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
-    test3: {
+    dispContainer: {
         // height: "400px"
         paddingTop: theme.spacing(5),
         paddingBottom: theme.spacing(5),
         // backgroundColor: '#fff'
       },
-      test1: {
+      dispText: {
         //  height: 'auto',
         //  maxHeight: '100%',
           padding: theme.spacing(0, 10, 10),
         },
-        test2: {
+        dispImg: {
           // width: '100%',
           // position: 'relative',
           // height: 'auto',
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         },
-        heroButtons: {
+        dispButton: {
             marginTop: theme.spacing(4),
           },
 

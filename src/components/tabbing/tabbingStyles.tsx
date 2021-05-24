@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme: Theme) => ({
       minHeight: '600px',
       // backgroundColor: '#fff'
     },
-    tabFlex: {
+    // tabFlex: {
   
-    },
+    // },
     textDec: {
       textDecoration: 'none',
       transition: 'all .3s ease',
       '&:hover': {
+        //! CHANGE
         color: 'blue'
       },
     },
@@ -33,14 +34,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   
   
-    gridCss: {
-      paddingTop: '20px',
-      paddingBottom: '20px',
-      borderTop: '1px solid black',
-      '&:last-child': {
-        borderBottom: '1px solid black'
-      }
-    }
+    // gridCss: {
+    //   paddingTop: '20px',
+    //   paddingBottom: '20px',
+    //   borderTop: '1px solid black',
+    //   '&:last-child': {
+    //     borderBottom: '1px solid black'
+    //   }
+    // }
   }));
 
   export default useStyles;

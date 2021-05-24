@@ -119,8 +119,10 @@ const Tabbing = () => {
                 {/* <TableCell component="th" scope="row">
                   {tab.title}
                 </TableCell> */}
+                 {/* //! CHANGE */}
                 <TableCell component="th" scope="row"> <Typography component={Link} to={"/info/" + tab.id}  className={classes.textDec} color="secondary">{tab.title}</Typography></TableCell>
                 <TableCell align="center">${tab.price}</TableCell>
+                 {/* //! CHANGE */}
                 <TableCell align="right"> <Button variant='contained' color='secondary' component={Link} to={"/info/" + tab.id}>Click</Button></TableCell>
 
               </TableRow>

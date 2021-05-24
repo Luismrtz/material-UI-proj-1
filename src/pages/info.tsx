@@ -31,9 +31,9 @@ const InfoPage:React.FC<RouteComponentProps<any>> = (props) => {
     if ( !tabbingFind ) {
       props.history.push("/")
     } else {
-      return;
+      return  window.scrollTo(0, 0);
     }
-    window.scrollTo(0, 0);
+
     // const handleWindowResize = () => setWidth(window.innerWidth);
     return () => {
       // window.removeEventListener("resize", handleWindowResize);

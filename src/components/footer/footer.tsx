@@ -1,6 +1,9 @@
 import { makeStyles, Typography } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
 
+
+
+// styles
 const useStyles = makeStyles((theme) => ({
     footer: {
         backgroundColor: theme.palette.background.paper,
@@ -9,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
+
+//copyright component
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -22,7 +27,7 @@ function Copyright() {
   );
 }
 
-
+// footer start
 const Footer = () => {
     const classes = useStyles();
 
@@ -31,6 +36,7 @@ const Footer = () => {
         <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>
+         {/* //! CHANGE */}
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Something here to give the footer a purpose!
         </Typography>

@@ -10,12 +10,22 @@ const useStyles = makeStyles((theme) => ({
         // maxWidth: '112rem',
         padding: theme.spacing(8, 0, 8),
       },
-      contWidth: {
+//       contWidth: {
 
-     backgroundColor: '#fff'
- },
+//      backgroundColor: '#fff'
+//  },
+ card: {
+  height: '25rem',
+  // backgroundColor: '#333'
+  // width: '100%',
+  // width: '20rem',
+  // maxHeight: '10rem',
+  // maxWidth: '30rem',
+  // display: 'flex',
+  // flexDirection: 'column',
+}, 
       card2: {
-        height: '25rem',
+        height: '17rem',
         // backgroundColor: '#7e7d7d'
         // width: '100%',
         // width: '20rem',
@@ -25,22 +35,14 @@ const useStyles = makeStyles((theme) => ({
         // display: 'flex',
         // flexDirection: 'column',
       },
+ 
+
       cardMedia: {
         // width: '100%',
         
         height: '100%',
         paddingTop: '56.25%', // 16:9
       },
-      card: {
-        height: '17rem',
-        // backgroundColor: '#333'
-        // width: '100%',
-        // width: '20rem',
-        // maxHeight: '10rem',
-        // maxWidth: '30rem',
-        // display: 'flex',
-        // flexDirection: 'column',
-      }, 
       cardactionTest: {
         height: '100%'
       }

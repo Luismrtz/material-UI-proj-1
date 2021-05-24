@@ -60,9 +60,11 @@ import {useStyles, mainBanner} from './mainStyles';
             {/* <Box alignItems="center"> */}
             <Grid container justify="center">
             <Grid item md={4}>
+               {/* //! CHANGE */}
             <Typography component="h1" variant="h2" align="center" color="secondary" gutterBottom>
              {mainTitle}
             </Typography>
+             {/* //! CHANGE */}
             <Typography variant="h5" align="center" color="secondary" paragraph>
             {mainDesc}
             </Typography>

@@ -12,9 +12,11 @@ const Bio:React.FC = () => {
   
         <Grid container  className={classes.bioContainer} justify="center">
           <Grid container item alignContent="center" sm={12} md={4} className={classes.layoutText}>
+          {/* //! CHANGE */}
           <Typography component="h3" variant="h2" align="left" color="secondary" gutterBottom>
             Bio layout
           </Typography>
+           {/* //! CHANGE */}
           <Typography variant="h5" align="left" color="secondary" paragraph>
             Something short and leading about the collection below—its contents, the creator, etc.
             Something short and leading about the collection below—its contents, the creator, etc.

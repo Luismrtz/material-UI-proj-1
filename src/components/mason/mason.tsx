@@ -81,7 +81,7 @@ return (
             { card.id % 2 === 0 ?
              (
               <div>
-              <Card  className={classes.card2} elevation={1}>
+              <Card  className={classes.card} elevation={1}>
                 <CardActionArea className={classes.cardactionTest}>
                 <CardMedia 
                 component={Link} to={"/details/" + card.id}
@@ -99,7 +99,7 @@ return (
               :  
               (
                 <div>
-              <Card className={classes.card} elevation={1}>   
+              <Card className={classes.card2} elevation={1}>   
                     {/* <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
                     Heading

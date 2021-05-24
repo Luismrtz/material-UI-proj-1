@@ -49,6 +49,10 @@ export const infoStyles = makeStyles((theme) => ({
       // padding: theme.spacing(0, 2),
       
       // overflow: 'hidden'
+  },  
+  colorWrapper: {
+    // backgroundColor: 'orangered',
+    backgroundColor: 'white'
   },
   maxWidthWrapper: {
     // margin: theme.spacing(0,'auto', 0),
@@ -56,10 +60,7 @@ export const infoStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 2),
     // maxWidth: '112rem'
   },
-  colorWrapper: {
-    // backgroundColor: 'orangered',
-    backgroundColor: 'white'
-  },
+
   innerWidth: {
     margin: theme.spacing(0, 'auto', 0),
     paddingTop: theme.spacing(5),
@@ -74,24 +75,24 @@ export const infoStyles = makeStyles((theme) => ({
       padding: theme.spacing(5, 0, 5)
     },
   
-      spacingTitle: {
-          marginBottom: theme.spacing(10),
-        },
-        test4: {
-          // height: '80vh',
-          padding: theme.spacing(10, 0),
-          backgroundColor: 'rgb(252,244,235)'
-        },
-        cardMediaTest1: {
-          height: '400px',
-        },
-        test6: {
-          margin: theme.spacing(4, 0),
-        },
-        mWidth: {
-          margin: 'auto',
-          maxWidth: '112rem'
-        }
+      // spacingTitle: {
+      //     marginBottom: theme.spacing(10),
+      //   },
+        // test4: {
+        //   // height: '80vh',
+        //   padding: theme.spacing(10, 0),
+        //   backgroundColor: 'rgb(252,244,235)'
+        // },
+        // cardMediaTest1: {
+        //   height: '400px',
+        // },
+        // test6: {
+        //   margin: theme.spacing(4, 0),
+        // },
+        // mWidth: {
+        //   margin: 'auto',
+        //   maxWidth: '112rem'
+        // }
       
   }));
 
@@ -101,19 +102,19 @@ export const infoStyles = makeStyles((theme) => ({
     contWidth: {
         maxWidth: '112rem',
     },
-    marginTest: {
+    typographyContMargin: {
         // marginTop: '10rem',
         margin: theme.spacing(20, 0, 15)
        
     },
-    typeSpacing: {
+    typoMargin: {
       // margin: theme.spacing(5, 0, 5),
       marginBottom: theme.spacing(5),
     },
-    cardactionTest: {
+    cardActionHeight: {
         height: '100%'
       },
-      card2: {
+      card: {
         height: '25rem',
       },
       cardModal: {
@@ -133,7 +134,7 @@ export const infoStyles = makeStyles((theme) => ({
         maxHeight: '100%',
         // maxHeight: '700px',
         // backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
+        // border: '2px solid #000',
         boxShadow: theme.shadows[5],
         // padding: theme.spacing(2, 4, 3),
       },

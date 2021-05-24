@@ -15,18 +15,17 @@ export const useStyles = makeStyles<Theme, mainBanner>((theme) => ({
 
 
 
-    test5: {
-      // width: '100%',
-      // height: '100%',
-      backgroundImage: `url(${'/images/canyon_1920.jpg'})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    },
+    // test5: {
+
+    //   backgroundImage: `url(${'/images/canyon_1920.jpg'})`,
+    //   backgroundRepeat: 'no-repeat',
+    //   backgroundSize: 'cover',
+    //   backgroundPosition: 'center',
+    // },
     
-    icon: {
-      marginRight: theme.spacing(2),
-    },
+    // icon: {
+    //   marginRight: theme.spacing(2),
+    // },
     heroContent: ({mainHeight}) => {
       return {
       // backgroundColor: theme.palette.background.paper,
@@ -58,7 +57,7 @@ export const useStyles = makeStyles<Theme, mainBanner>((theme) => ({
       minHeight: mainHeight,
       
       position: "absolute",
-      
+      //! CHANGE
       backgroundColor: 'rgba(204, 15, 15, 0.11)'
   
       }
@@ -75,9 +74,9 @@ export const useStyles = makeStyles<Theme, mainBanner>((theme) => ({
       minHeight: mainHeight,
       }
     },
-    heroButtons: {
-      marginTop: theme.spacing(4),
-    },
+    // heroButtons: {
+    //   marginTop: theme.spacing(4),
+    // },
   
   
   

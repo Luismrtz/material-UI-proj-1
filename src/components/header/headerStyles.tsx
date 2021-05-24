@@ -2,21 +2,10 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-  
-    },
-    menuButton: {
-
-      // marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-      
-      
-    },
-    menuSliderContainer: {
-      width: '55vw',
+    //? sideList
+    navSliderContainer: {
+      width: '50vw',
+      // width: theme.spacing(30),
       // background: "#133750",
       // background: "#389243",
       background: "orangered",
@@ -29,9 +18,22 @@ const useStyles = makeStyles((theme: Theme) =>
       height: theme.spacing(13)
     },
     listItem: {
+      //! CHANGE
       color: "#b18a65"
     },
-    contWidth: {
+
+    //?component container
+    container: {
+      flexGrow: 1,
+  
+    },
+    menuButton: {
+
+      // marginRight: theme.spacing(2),
+    },
+  
+
+    subContWidth: {
   
       // margin: 'auto',
       maxWidth: '112rem',
@@ -41,21 +43,25 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingLeft: '0'
     },
 
+    title: {
+      flexGrow: 1,
+      
+      
+    },
 
-
-    bigTestIcon: {
+    hamburger: {
         [theme.breakpoints.up('md')]: {
           display: 'none'
         }
     },
 
-    bigTestSlider: {
+    mobileSliderWrapper: {
       [theme.breakpoints.up('md')]: {
         display: 'none'
       }
     },
 
-    bigTest4: {
+    navLinks: {
       display: 'flex',
       '& > a': {
     
@@ -77,6 +83,7 @@ const useStyles = makeStyles((theme: Theme) =>
      textDec: {
       transition: 'all .3s ease',
       '&:hover': {
+        //! CHANGE
         color: 'blue'
       },
     },

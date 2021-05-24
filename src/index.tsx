@@ -8,6 +8,7 @@ import {createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 const globalTheme = createMuiTheme({
   palette: {
+    //! CHANGE
     primary: {
       // main: '#7e0f0f'
       main: '#fff'

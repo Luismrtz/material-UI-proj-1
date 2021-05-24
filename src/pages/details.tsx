@@ -71,10 +71,10 @@ const DetailsPage:React.FC<RouteComponentProps<any>> = (props) => {
     if ( !imgFind ) {
       props.history.push("/")
     } else {
-      return;
+      return window.scrollTo(0, 0);
     }
     setShowModal(false);
-    window.scrollTo(0, 0);
+    
     // const handleWindowResize = () => setWidth(window.innerWidth);
     return () => {
       // window.removeEventListener("resize", handleWindowResize);
@@ -132,9 +132,9 @@ const closeModal = () => {
       {imgFind ? (
  <Container className={classes.contWidth}>
  <Grid container  direction="column" alignItems="center">
-   <Grid container item xs={5} direction="column" alignItems="flex-start" justify="center" className={classes.marginTest}>
+   <Grid container item xs={5} direction="column" alignItems="flex-start" justify="center" className={classes.typographyContMargin}>
 
-     <Typography variant="h3" className={classes.typeSpacing}>
+     <Typography variant="h3" className={classes.typoMargin}>
        {imgFilt[0]?.title}
    </Typography>
      <Typography variant="body1" >
@@ -144,8 +144,8 @@ const closeModal = () => {
 
      <Grid container item  spacing={3}>
        <Grid item xs={12} sm={7} md={4} onClick={() => openModal({urlPhoto})}>
-       <Card  className={classes.card2} elevation={1}>
-           <CardActionArea className={classes.cardactionTest}>
+       <Card  className={classes.card} elevation={1}>
+           <CardActionArea className={classes.cardActionHeight}>
            <CardMedia 
          
              className={classes.cardMedia}
@@ -156,8 +156,8 @@ const closeModal = () => {
          </Card>
      </Grid>
        <Grid item xs={12} sm={5} md={2} onClick={() => openModal2({urlPhoto2})}>
-       <Card  className={classes.card2} elevation={1}>
-           <CardActionArea className={classes.cardactionTest}>
+       <Card  className={classes.card} elevation={1}>
+           <CardActionArea className={classes.cardActionHeight}>
            <CardMedia 
          
              className={classes.cardMedia}
@@ -168,8 +168,8 @@ const closeModal = () => {
          </Card>
      </Grid>
        <Grid item xs={12} sm={12} md={6} onClick={() => openModal3({urlPhoto3})}>
-       <Card  className={classes.card2} elevation={1}>
-           <CardActionArea className={classes.cardactionTest}>
+       <Card  className={classes.card} elevation={1}>
+           <CardActionArea className={classes.cardActionHeight}>
            <CardMedia 
          
              className={classes.cardMedia}
@@ -187,7 +187,7 @@ const closeModal = () => {
         >
           <div style={modalStyle} className={classes.paper}>
           <Card  className={classes.cardModal} elevation={1}>
-           <CardActionArea className={classes.cardactionTest}>
+           <CardActionArea className={classes.cardActionHeight}>
            <CardMedia 
          
              className={classes.cardMedia}
