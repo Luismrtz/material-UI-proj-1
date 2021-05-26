@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {useStyles, mainBanner} from './mainStyles';
+import { Box } from '@material-ui/core';
 
 
-
-// import './masonry.css';
-
-
-
-
-
-
-
-
-
-// const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
  const Main: React.FC<mainBanner> = ({mainTitle, mainDesc, mainHeight}) => {
   const classes = useStyles({mainHeight, mainTitle, mainDesc});
@@ -42,59 +30,36 @@ import {useStyles, mainBanner} from './mainStyles';
   let newTest = offset * 0.6;
   return (
     <React.Fragment>
-      {/* <CssBaseline /> */}
-      {/* <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            Album layout
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
+  
       <main>
-        {/* Hero unit */}
         <div  className={classes.heroContent} 
        
         >
-          {/* <Container maxWidth={'xl'}> */}
-            {/* <Box alignItems="center"> */}
-            <Grid container justify="center">
+              {/* typography container  */}
+            <Grid container justify="center" className={classes.typoSpacing}>
             <Grid item md={4}>
                {/* //! CHANGE */}
-            <Typography component="h1" variant="h2" align="center" color="secondary" gutterBottom>
-             {mainTitle}
+            <Typography  component="h1" variant="h1" align="center" color="secondary" gutterBottom>
+              <Box fontWeight="bold" letterSpacing={4} whiteSpace="nowrap">
+               {mainTitle}
+              </Box>
             </Typography>
              {/* //! CHANGE */}
-            <Typography variant="h5" align="center" color="secondary" paragraph>
+            <Typography variant="h3" align="center" color="secondary" paragraph>
             {mainDesc}
             </Typography>
-            {/* <div className={classes.heroButtons}>
-              <Grid container spacing={2}
-               justify="center"
-               >
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div> */}
+    
             </Grid>
           </Grid>
-            {/* </Box> */}
+       
    
    
-          {/* </Container> */}
         </div >
+         {/* tint wrapper  */}
         <div className={classes.heroContentWrapper}>
 
         </div>
-     
+      {/* background Image  */}
         {width > breakpoint ? (
         <div className={classes.heroContentImage}
           style={{ transform: `translateY(${newTest}px)` }}
@@ -110,9 +75,6 @@ import {useStyles, mainBanner} from './mainStyles';
 
 
       </main>
-      {/* Footer */}
- 
-      {/* End footer */}
     </React.Fragment>
   );
 }

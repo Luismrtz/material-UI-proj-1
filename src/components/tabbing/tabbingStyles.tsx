@@ -3,17 +3,16 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
-      // flexGrow: 1,
-      // backgroundColor: theme.palette.background.paper,
+ 
      paddingTop: theme.spacing(14),
       paddingBottom: theme.spacing(14),
       textAlign: 'center',
       minHeight: '600px',
-      // backgroundColor: '#fff'
+     
     },
-    // tabFlex: {
+
   
-    // },
+
     textDec: {
       textDecoration: 'none',
       transition: 'all .3s ease',
@@ -23,7 +22,8 @@ const useStyles = makeStyles((theme: Theme) => ({
       },
     },
     table: {
-      minWidth: 500,
+      minWidth: 200,
+     
     },
     tabbingCss: {
       marginTop: theme.spacing(8),
@@ -34,14 +34,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   
   
-    // gridCss: {
-    //   paddingTop: '20px',
-    //   paddingBottom: '20px',
-    //   borderTop: '1px solid black',
-    //   '&:last-child': {
-    //     borderBottom: '1px solid black'
-    //   }
-    // }
+
   }));
 
   export default useStyles;

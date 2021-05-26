@@ -2,6 +2,7 @@ export interface ImageTypes {
     id: number;
     title: string;
     img: string;
+    imgSmall: string;
 }
 
 export interface State {

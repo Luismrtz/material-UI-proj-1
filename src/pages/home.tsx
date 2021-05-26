@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import Main from '../components/main/main'
-import { makeStyles } from '@material-ui/core/styles';
 import Mason from '../components/mason/mason';
 import Display from '../components/display/display';
-import Footer from '../components/footer/footer';
-import { Container } from '@material-ui/core'
+
 import Tabbing from '../components/tabbing/tabbing';
 
 
@@ -23,9 +21,9 @@ const HomePage = () => {
     return (
     
         //container as wrapper for maxWidth.  
-        <div >
+        <div  >
             <div className={classes.contWidth}>
-                <Main mainDesc="This is a description to test reusability" mainHeight="90vh" mainTitle="This is a title" />
+                <Main mainDesc="This is a description to test reusability" mainHeight="90vh" mainTitle="A TITLE" />
             </div>
             <div className={classes.colorWrapper}>
                 <div  className={classes.subContWidth}>
@@ -36,7 +34,7 @@ const HomePage = () => {
                 </div>
             </div>
         
-            {/* <Footer/> */}
+
         </div>
    
     )

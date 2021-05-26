@@ -14,46 +14,35 @@ export const useStyles = makeStyles<Theme, mainBanner>((theme) => ({
 
 
 
-
-    // test5: {
-
-    //   backgroundImage: `url(${'/images/canyon_1920.jpg'})`,
-    //   backgroundRepeat: 'no-repeat',
-    //   backgroundSize: 'cover',
-    //   backgroundPosition: 'center',
-    // },
-    
-    // icon: {
-    //   marginRight: theme.spacing(2),
-    // },
     heroContent: ({mainHeight}) => {
       return {
-      // backgroundColor: theme.palette.background.paper,
-      // minHeight:'90vh',
-        // margin: 'auto',
+ 
         width: '100%',
       maxWidth: '112rem',
-      // height: '100%',
+    
       minHeight: mainHeight,
       
       position: "absolute",
       padding: theme.spacing(1, 0, 1),
-      // height: theme.spacing(110),
+ 
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'
       }
   
     },
+    typoSpacing: {
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1),
+    },
     heroContentWrapper: ({mainHeight}) => {
       return {
-      // backgroundColor: theme.palette.background.paper,
-      // minHeight:'90vh',
+  
       zIndex: -3,
-        // margin: 'auto',
+ 
         width: '100%',
       maxWidth: '112rem',
-      // height: '100%',
+
       minHeight: mainHeight,
       
       position: "absolute",
@@ -72,18 +61,16 @@ export const useStyles = makeStyles<Theme, mainBanner>((theme) => ({
       backgroundPosition: 'center',
       position: "relative",
       minHeight: mainHeight,
+
+      [theme.breakpoints.down(650)]: {
+        backgroundImage: `url(${'/images/canyon_640.jpg'})`,
+      }
       }
     },
-    // heroButtons: {
-    //   marginTop: theme.spacing(4),
-    // },
+
   
   
-  
-  
-    cardContent: {
-      flexGrow: 1,
-    },
+
   
   
   }));

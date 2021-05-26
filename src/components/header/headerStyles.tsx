@@ -4,18 +4,26 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     //? sideList
     navSliderContainer: {
-      width: '50vw',
+      width: '52vw',
+
+      [theme.breakpoints.up('sm')]: {
+        width: '30vw'
+      },
       // width: theme.spacing(30),
+      //! CHANGE
       // background: "#133750",
       // background: "#389243",
       background: "orangered",
       height: "100%"
     },
     avatar: {
-      display: "block",
-      margin: "0.5rem auto",
-      width: theme.spacing(13),
-      height: theme.spacing(13)
+      // display: "block",
+      // margin: "0.5rem auto",
+      // width: theme.spacing(13),
+      height: theme.spacing(6),
+      [theme.breakpoints.up('sm')]: {
+        height: theme.spacing(7)
+      },
     },
     listItem: {
       //! CHANGE
@@ -34,8 +42,6 @@ const useStyles = makeStyles((theme: Theme) =>
   
 
     subContWidth: {
-  
-      // margin: 'auto',
       maxWidth: '112rem',
   },
     toolBarTheme: {

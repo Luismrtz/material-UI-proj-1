@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link, RouteComponentProps, withRouter } from "react-router-dom";
 import classNames from 'classnames';
-import {makeStyles } from '@material-ui/core/styles';
-import { Button, Card, CardMedia, Grid, Typography } from '@material-ui/core';
+
+import { Button,  Grid, Typography } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { State } from '../state/type';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -23,7 +23,7 @@ const InfoPage:React.FC<RouteComponentProps<any>> = (props) => {
    const tabbingFilt = tabbingData.filter(filt => filt.id === tabbingId)
 
 
-   console.log(tabbingFilt);
+
    
   useEffect(() => {
   
@@ -34,9 +34,9 @@ const InfoPage:React.FC<RouteComponentProps<any>> = (props) => {
       return  window.scrollTo(0, 0);
     }
 
-    // const handleWindowResize = () => setWidth(window.innerWidth);
+ 
     return () => {
-      // window.removeEventListener("resize", handleWindowResize);
+   
     }
   }, [props, tabbingFind])
 
@@ -58,7 +58,9 @@ const InfoPage:React.FC<RouteComponentProps<any>> = (props) => {
               <div >
 
                 <div className={classes.innerWidth}>
+                  {/* <Typography variant="h5"> */}
                 <Button  component={Link} to={"/"} startIcon={<ArrowBackIcon/>} color='secondary' variant='text'>Back</Button>
+                  {/* </Typography> */}
                 <div className={classes.pageAlign} >
                   <Typography variant="h2">Initial Title</Typography>
 

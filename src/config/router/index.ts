@@ -40,13 +40,3 @@ export const routes: IRoute[] = [
 ]
 
 
-// <Switch>
-//       <Redirect exact from="/home" to="/home/about" />
-//       <Route exact path="/home/:page?" render={props => <Home {...props} />} />
-// </Switch>
-
-// <Switch>
-//     <Route exact from="/" render={props => <Home {...props} />} />
-//     <Route exact path="/contact" render={props => <Contact {...props} />} />
-//     <Route exact path="/about" render={props => <About {...props} />} />
-// </Switch>

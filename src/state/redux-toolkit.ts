@@ -6,45 +6,41 @@ const itemData: ImageTypes[]= [
     {
       id: 1,
       img: '/images/canyon_1920.jpg',
+      imgSmall: '/images/canyon_640.jpg',
       title: 'Bed',
     },
     {
         id: 2,
-      img: '/images/hiker_640.jpg',
+        img: '/images/hiker_1920.jpg',
+      imgSmall: '/images/canyon_640.jpg',
       title: 'Books',
     },
     {
-        id: 3,
+      id: 3,
       img: '/images/canyon_1920.jpg',
-      title: 'Sink',
+      imgSmall: '/images/canyon_640.jpg',
+      title: 'Apples',
     },
     {
         id: 4,
-      img: '/images/hiker_640.jpg',
-      title: 'Kitchen',
+        img: '/images/hiker_1920.jpg',
+      imgSmall: '/images/hiker_640.jpg',
+      title: 'Oranges',
     },
     {
-        id: 5,
+      id: 5,
       img: '/images/canyon_1920.jpg',
-      title: 'Blinds',
+      imgSmall: '/images/canyon_640.jpg',
+      title: 'Pine',
     },
     {
         id: 6,
-      img: '/images/hiker_640.jpg',
-      title: 'Chairs',
+        img: '/images/hiker_1920.jpg',
+      imgSmall: '/images/hiker_640.jpg',
+      title: 'Olives',
     },
-    // {
-    //   img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
-    //   title: 'Laptop',
-    // },
-    // {
-    //   img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-    //   title: 'Doors',
-    // },
-    // {
-    //   img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-    //   title: 'NotDoors',
-    // },
+
+
    
   
   ];
@@ -95,7 +91,7 @@ const itemData: ImageTypes[]= [
     {
       id: 7,
     price: 10,
-    title: 'extra large',
+    title: 'extra',
     type: 1,
     desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
   },

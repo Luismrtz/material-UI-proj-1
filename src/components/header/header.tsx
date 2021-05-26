@@ -5,18 +5,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Avatar, Box, Container, Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import { Apps, AssignmentInd, ContactMail, Home } from '@material-ui/icons';
+import { Box, Container, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import {  AssignmentInd,  Home } from '@material-ui/icons';
 import cx from 'classnames'
 import { Link } from 'react-router-dom';
 import MobileMenuSlider from '@material-ui/core/Drawer'
 
 import useStyles from './headerStyles';
 
-// export type navTypes = {
-//   navbar: boolean
-
-// }
 
 
 
@@ -32,16 +28,7 @@ const menuItems = [
     listText: "About",
     linkTo: '/about'
   },
-  // {
-  //   listIcon: <Apps/>,
-  //   listText: "Portfolio",
-  //   linkTo: '/'
-  // },
-  // {
-  //   listIcon: <ContactMail/>,
-  //   listText: "Contact",
-  //   linkTo: '/'
-  // },
+
 
 ]
 
@@ -73,8 +60,8 @@ const Header: React.FC = () => {
 
   const sideList = (slider: any) => (
     <Box className={classes.navSliderContainer}   component="div" >
-      {/* <Avatar  className={classes.avatar} src="/images/canyon_1920.jpg" alt="avatar image"/>
-      <Divider/> */}
+      <div className={classes.avatar}></div>
+      {/* <Divider/> */}
       <List >
             {menuItems.map((lsItem, key) => (
               <ListItem component={Link} to={lsItem.linkTo} onClick={toggleSlider(slider, false)}  button key={key}>
@@ -95,7 +82,8 @@ const Header: React.FC = () => {
     <div className={cx(classes.container)}>
 
       {/* //todo add elevation zero at TOP of scroll? */}
-      <AppBar position="fixed" elevation={ navbar ? 3 : 0} >
+       {/* //! CHANGE */}
+      <AppBar position="fixed" color="primary" elevation={ navbar ? 3 : 0} >
 
         <Container className={classes.subContWidth}>
           <Toolbar  className={classes.toolBarTheme}>

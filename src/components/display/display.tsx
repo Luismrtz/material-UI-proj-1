@@ -14,7 +14,7 @@ const Display:React.FC = () => {
         <Grid container  className={classes.dispContainer}>
           <Grid container item alignContent="center" sm={12} md={6} className={classes.dispText}>
              {/* //! CHANGE */}
-          <Typography component="h3" variant="h2" align="left" color="secondary" gutterBottom>
+          <Typography component="h2" variant="h2" align="left" color="secondary" gutterBottom>
             Album layout
           </Typography>
            {/* //! CHANGE */}
@@ -29,22 +29,17 @@ const Display:React.FC = () => {
              >
               <Grid item >
                  {/* //! CHANGE */}
-                <Button variant="contained" color="primary"  component={Link} to={"/about"} >
-                  Main call to action
+                <Button variant="contained" color="secondary"  component={Link} to={"/about"} >
+                  About
                 </Button>
               </Grid>
-              {/* <Grid item>
-                <Button variant="outlined" color="primary">
-                  Secondary action
-                </Button>
-              </Grid> */}
+
             </Grid>
           </div>.
           </Grid>
           <Grid xs={12} sm={12} md={6} item className={classes.dispImg}>
              
-             {/* <Card square><CardMedia  className={classes.test2} image={`/images/canyon_1920.jpg`}></CardMedia></Card> */}
-             
+
              </Grid>
         </Grid>
 

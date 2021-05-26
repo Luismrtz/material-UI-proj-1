@@ -5,17 +5,14 @@ import { State } from '../state/type';
 import { Card, CardActionArea, CardMedia, Container, Grid, Modal, Typography } from '@material-ui/core'
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
-import Footer from '../components/footer/footer';
 
 import { detailStyles } from './pagesStyles';
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
+
 
 function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
+  // const top = 50 + rand();
+  // const left = 50 + rand();
 
   return {
     // top: `${top}%`,
@@ -25,14 +22,7 @@ function getModalStyle() {
     top: '50%',
     left: '50%',
     transform: `translate(-50%, -50%)`
-    // right: 0,
-    // bottom: 0,
-    // width: '100%',
-    // height: '100%',
-    // position: 'absolute',
-    // display: 'flex',
-    // justifyContent: 'center',
-    // alignItems: 'center'
+
   };
 }
 
@@ -44,42 +34,46 @@ const DetailsPage:React.FC<RouteComponentProps<any>> = (props) => {
     const select = useSelector((state: State) => state.select);
     const classes = detailStyles();
     const [showModal, setShowModal] = useState(false);
-    // const [width, setWidth] = useState(window.innerWidth);
+ 
     const [modalStyle] = useState(getModalStyle);
-    // const breakpoint = 650;
-     
+
     const [newUrl, setNewUrl] = useState("");
     
-    
-    
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 650;
     const imgId = JSON.parse(props.match.params.id);
     const imgFind = select.find(filt => filt.id === imgId)
     const imgFilt = select.filter(filt => filt.id === imgId)
-    const urlPhoto = imgFilt[0]?.img;
-    const urlPhoto2 = imgFilt[0]?.img;
-    const urlPhoto3 = imgFilt[0]?.img;
-   
-    console.log(urlPhoto)
-    console.log(newUrl)
-  // console.log(imgFind)
-  // console.log(imgFilt)
-  // console.log(imgId)
 
-  useEffect(() => {
-  
+
+    useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
    
-    if ( !imgFind ) {
-      props.history.push("/")
-    } else {
-      return window.scrollTo(0, 0);
-    }
-    setShowModal(false);
+      if ( !imgFind ) {
+        props.history.push("/")
+      } else {
+        return window.scrollTo(0, 0);
+      }
+      setShowModal(false);
+
+  
+      
+   
+      return () => {
+        window.removeEventListener("resize", handleWindowResize);
+ 
+      }
+    }, [props, imgFind])
+
+
     
-    // const handleWindowResize = () => setWidth(window.innerWidth);
-    return () => {
-      // window.removeEventListener("resize", handleWindowResize);
-    }
-  }, [props, imgFind])
+
+    const urlPhoto = width > breakpoint ? imgFilt[0]?.img : imgFilt[0]?.imgSmall;
+    const urlPhoto2 = width > breakpoint ? imgFilt[0]?.img : imgFilt[0]?.imgSmall;
+    const urlPhoto3 = width > breakpoint ? imgFilt[0]?.img : imgFilt[0]?.imgSmall;
+   
+
 
 
 
@@ -88,8 +82,7 @@ const openModal = (
 ) => {
 
   setShowModal(true);
-  // width > breakpoint ? setNewUrl(urlphoto) : setNewUrl(urlSmall);
-  
+
   setNewUrl(urlPhoto)
 
 }
@@ -98,8 +91,7 @@ const openModal2 = (
 ) => {
 
   setShowModal(true);
-  // width > breakpoint ? setNewUrl(urlphoto) : setNewUrl(urlSmall);
-  
+
   setNewUrl(urlPhoto2)
  
 }
@@ -108,8 +100,7 @@ const openModal3 = (
 ) => {
 
   setShowModal(true);
-  // width > breakpoint ? setNewUrl(urlphoto) : setNewUrl(urlSmall);
-  
+
   setNewUrl(urlPhoto3)
 
 }
@@ -120,11 +111,6 @@ const closeModal = () => {
 }
 
 
-//   const modalClick = createMuiTheme({
-//    palette: {
-//        type: showModal ? "dark" : "light"
-//    }
-// })
 
 
     return (
