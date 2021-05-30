@@ -21,7 +21,7 @@ const HomePage = () => {
       <div className={classes.contWidth}>
         <Main
           headerAnimation
-          mainDesc="This test is reusable"
+          mainDesc="To test reusable components"
           mainHeight="90vh"
           mainTitle="Luis Martinez"
           backgroundImg="/images/building_1920.jpg"
