@@ -3,6 +3,8 @@ export interface ImageTypes {
     title: string;
     img: string;
     imgSmall: string;
+    altImg1: string;
+    altImg2: string;
 }
 
 export interface State {

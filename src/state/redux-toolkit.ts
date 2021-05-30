@@ -3,41 +3,55 @@ import { ImageTypes, TabTypes } from './type';
 
 
 const itemData: ImageTypes[]= [
+ 
     {
       id: 1,
-      img: '/images/canyon_1920.jpg',
-      imgSmall: '/images/canyon_640.jpg',
-      title: 'Bed',
+      img: '/images/library_1920.jpg',
+      imgSmall: '/images/library_640.jpg',
+      title: 'Books',
+      altImg1: '/images/book_640.jpg',
+      altImg2: '/images/watch_640.jpg',
     },
+    
     {
         id: 2,
-        img: '/images/hiker_1920.jpg',
-      imgSmall: '/images/canyon_640.jpg',
-      title: 'Books',
+        img: '/images/bricks_1920.jpg',
+      imgSmall: '/images/bricks_640.jpg',
+      title: 'Room',
+            altImg1: '/images/writingpad_640.jpg',
+      altImg2: '/images/calculator_640.jpg',
     },
     {
       id: 3,
-      img: '/images/canyon_1920.jpg',
-      imgSmall: '/images/canyon_640.jpg',
-      title: 'Apples',
+      img: '/images/computer_1280.jpg',
+      imgSmall: '/images/computer_640.jpg',
+      title: 'Peripherals',
+            altImg1: '/images/book_640.jpg',
+      altImg2: '/images/watch_640.jpg',
     },
     {
         id: 4,
-        img: '/images/hiker_1920.jpg',
-      imgSmall: '/images/hiker_640.jpg',
-      title: 'Oranges',
+        img: '/images/furniture_1920.jpg',
+      imgSmall: '/images/furniture_640.jpg',
+      title: 'Chair',
+            altImg1: '/images/writingpad_640.jpg',
+      altImg2: '/images/calculator_640.jpg',
     },
     {
       id: 5,
-      img: '/images/canyon_1920.jpg',
-      imgSmall: '/images/canyon_640.jpg',
-      title: 'Pine',
+      img: '/images/office_1920.jpg',
+      imgSmall: '/images/office_640.jpg',
+      title: 'Desk',
+            altImg1: '/images/book_640.jpg',
+      altImg2: '/images/watch_640.jpg',
     },
     {
         id: 6,
-        img: '/images/hiker_1920.jpg',
-      imgSmall: '/images/hiker_640.jpg',
-      title: 'Olives',
+        img: '/images/startup_1920.jpg',
+      imgSmall: '/images/startup_640.jpg',
+      title: 'Board',
+            altImg1: '/images/writingpad_640.jpg',
+      altImg2: '/images/calculator_640.jpg',
     },
 
 
@@ -49,51 +63,51 @@ const itemData: ImageTypes[]= [
     {
       id: 1,
         price: 3,
-      title: 'Bed',
+      title: 'Laptop',
       type: 1,
-      desc: 'This is a description of tips and tricks.  Sending multiple greetings your way. This is a description of tips and tricks.  Sending multiple greetings your way. This is a description of tips and tricks.  Sending multiple greetings your way.'
+      desc: 'Item description for the item listed.  Currently a laptop. '
     },
     {
         id: 2,
       price: 6,
-      title: 'Books',
+      title: 'Chair',
       type: 2,
-      desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+      desc: 'Item description for the item listed.  Currently a chair.'
     },
     {
         id: 3,
         price: 8,
-      title: 'Sink',
+      title: 'Pen',
       type: 1,
-      desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+      desc: 'Item description for the item listed.  Currently a pen.'
     },
     {
         id: 4,
       price: 0,
-      title: 'Kitchen',
+      title: 'Pencil',
       type: 2,
-      desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+      desc: 'Item description for the item listed.  Currently a pencil.'
     },
     {
         id: 5,
       price: 4,
-      title: 'Blinds',
+      title: 'Desk',
       type: 2,
-      desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+      desc: 'Item description for the item listed.  Currently a desk.'
     },
     {
         id: 6,
       price: 10,
-      title: 'Chairs',
+      title: 'Cabinet',
       type: 1,
-      desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+      desc: 'Item description for the item listed.  Currently a cabinet.'
     },
     {
       id: 7,
     price: 10,
-    title: 'extra',
+    title: 'Board',
     type: 1,
-    desc: 'This is a description of tips and tricks.  Sending multiple greetings your way.'
+    desc: 'Item description for the item listed.  Currently a board.'
   },
 
   
