@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import Main from "../components/main/main";
 import Mason from "../components/mason/mason";
 import Display from "../components/display/display";
@@ -6,7 +6,6 @@ import Display from "../components/display/display";
 import Tabbing from "../components/tabbing/tabbing";
 
 import { homeStyles } from "./pagesStyles";
-import { Fade, Grow } from "@material-ui/core";
 
 const HomePage = () => {
   const classes = homeStyles();

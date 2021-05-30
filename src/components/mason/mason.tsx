@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { State } from "../../state/type";
-import { Card, CardActionArea, CardMedia, Fade } from "@material-ui/core";
+import { Card, CardActionArea, CardMedia} from "@material-ui/core";
 import Masonry from "react-masonry-css";
 import cx from "classnames";
 import "./mason.css";

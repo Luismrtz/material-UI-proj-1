@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Main from "../components/main/main";
 
 import { aboutStyles } from "./pagesStyles";
