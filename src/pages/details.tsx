@@ -45,6 +45,7 @@ const DetailsPage: React.FC<RouteComponentProps<any>> = (props) => {
   const imgFind = select.find((filt) => filt.id === imgId);
   const imgFilt = select.filter((filt) => filt.id === imgId);
 
+  console.log(select)
   useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowResize);

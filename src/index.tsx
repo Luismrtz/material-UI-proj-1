@@ -4,6 +4,10 @@ import "./index.css";
 import App from "../src/App/App";
 import { Provider } from "react-redux";
 import store from "./state/redux-toolkit";
+
+
+//todo (createMuiTheme is deprecated) replace createMuiTheme with createTheme
+//todo forgot to add CssBaseline do deal with background color
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const defaultTheme = createMuiTheme();

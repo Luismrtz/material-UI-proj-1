@@ -16,7 +16,6 @@ export const useStyles = makeStyles<Theme, mainBanner>((theme) => ({
     return {
       width: "100%",
       maxWidth: "112rem",
-
       minHeight: mainHeight,
 
       position: "absolute",
